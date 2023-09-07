@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argo-sync
+  namespace: default
+spec:
+  source:
+    repoURL: https://github.com/limanalhassan/microservices-argoCD.git
+    path: application
+    targetRevision: HEAD
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: app-space
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+
