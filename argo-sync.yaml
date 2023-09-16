@@ -16,4 +16,25 @@ spec:
     automated:
       prune: true
       selfHeal: true
+---
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argo-sync
+  namespace: default
+spec:
+  source:
+    repoURL: https://github.com/limanalhassan/microservices-argoCD.git
+    path: .
+    targetRevision: HEAD
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: color
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+
 
