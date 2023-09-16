@@ -6,7 +6,7 @@ metadata:
 spec:
   source:
     repoURL: https://github.com/limanalhassan/microservices-argoCD.git
-    path: 
+    path: application
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
