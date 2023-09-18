@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argo-sync
+  name: argo-sync-app
   namespace: argocd
 spec:
   source:
@@ -10,7 +10,7 @@ spec:
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: app-space
   project: default
   syncPolicy:
     automated:
