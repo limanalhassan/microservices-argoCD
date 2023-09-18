@@ -94,7 +94,7 @@ def hello_world(color=None):
             </style>
         </head>
         <body style="background-color:{{color}}">
-            <div class="moving-text">Happy Learning With DevopClinics!!!</div>
+            <div class="moving-text">Happy Learning With Liman!!!</div>
         </body>
         </html>
         ''', color=color)
