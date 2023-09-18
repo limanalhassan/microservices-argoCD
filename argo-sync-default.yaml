@@ -10,7 +10,7 @@ spec:
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
-    namespace: app-space
+    namespace: app-spaces
   project: default
   syncPolicy:
     automated:

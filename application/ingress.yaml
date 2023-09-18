@@ -7,21 +7,21 @@ spec:
   rules:
   - http:
       paths:
-      - path: /blue
+      - path: /blues
         pathType: Prefix
         backend:
           service:
             name: blue-service
             port:
               number: 80
-      - path: /green
+      - path: /greens
         pathType: Prefix
         backend:
           service:
             name: green-service
             port:
               number: 80
-      - path: /red
+      - path: /reds
         pathType: Prefix
         backend:
           service:
