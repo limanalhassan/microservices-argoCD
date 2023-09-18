@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: color-app
-        image:  muritala/color-dance:v1.1
+        image:  limanalhassan/my-aaa-py:v1
         env:
         - name: COLOR
           valueFrom:
