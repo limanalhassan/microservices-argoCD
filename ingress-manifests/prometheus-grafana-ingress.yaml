@@ -8,14 +8,14 @@ spec:
   rules:
   - http:
       paths:
-      - path: /alertx
+      - path: /alerts
         pathType: Prefix
         backend:
           service:
             name: prom-sync-app-kube-prometh-alertmanager
             port:
               number: 9093
-      - path: /proms
+      - path: /prom
         pathType: Prefix
         backend:
           service:
