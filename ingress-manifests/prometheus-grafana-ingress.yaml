@@ -2,16 +2,31 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: prometheus-grafana-ingress
+  namespace: monitoring
 spec:
   ingressClassName: nginx
   rules:
   - http:
       paths:
+      - path: /alerts
+        pathType: Prefix
+        backend:
+          service:
+            name: prom-sync-app-kube-prometh-alertmanager
+            port:
+              number: 9093
       - path: /prom
         pathType: Prefix
         backend:
           service:
-            name: prometheus-grafana
+            name: prom-sync-app-kube-prometh-prometheus
+            port:
+              number: 9090
+      - path: /grafana
+        pathType: Prefix
+        backend:
+          service:
+            name: prom-sync-app-grafana
             port:
               number: 80
 

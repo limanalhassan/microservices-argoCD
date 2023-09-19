@@ -461,7 +461,7 @@ alertmanager:
 
     ## Service type
     ##
-    type: NodePort
+    type: ClusterIP
 
   ## Configuration for creating a separate Service for each statefulset Alertmanager replica
   ##
@@ -884,12 +884,12 @@ grafana:
   ingress:
     ## If true, Grafana Ingress will be created
     ##
-    enabled: true
+    enabled: false
 
     ## IngressClassName for Grafana Ingress.
     ## Should be provided if Ingress is enable.
     ##
-    ingressClassName: nginx
+    # ingressClassName: nginx
 
     ## Annotations for Grafana Ingress
     ##
@@ -909,7 +909,7 @@ grafana:
     hosts: []
 
     ## Path for grafana ingress
-    path: /grafana
+    path: /grafanas
 
     ## TLS configuration for grafana Ingress
     ## Secret must be manually created in the namespace
@@ -2583,7 +2583,7 @@ prometheus:
 
     ## Service type
     ##
-    type: NodePort
+    type: ClusterIP
 
     ## Additional port to define in the Service
     additionalPorts: []
