@@ -2583,7 +2583,7 @@ prometheus:
 
     ## Service type
     ##
-    type: ClusterIP
+    type: NodePort
 
     ## Additional port to define in the Service
     additionalPorts: []
