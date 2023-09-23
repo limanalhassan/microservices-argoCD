@@ -13,6 +13,8 @@ spec:
     namespace: app-spaces
   project: default
   syncPolicy:
+    syncOptions:
+    - ServerSideApply=true
     automated:
       prune: true
       selfHeal: true
