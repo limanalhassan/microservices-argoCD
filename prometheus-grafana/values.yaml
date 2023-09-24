@@ -281,7 +281,10 @@ alertmanager:
         matchers:
           - alertname =~ "InfoInhibitor|Watchdog"
     receivers:
-    - name: 'null'
+    - name: 'github-webhook'
+      webhook_configs:
+      - url: 'https://github.com/limanalhassan/microservices-argoCD/settings/hooks/434962935'
+        send_resolved: true
     templates:
     - '/etc/alertmanager/config/*.tmpl'
 
